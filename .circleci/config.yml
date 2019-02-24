@@ -10,6 +10,7 @@ jobs:
       - run:  head -5 package.json
   publish_develop:
     docker:
+      - image: circleci/node:10-alpine
     steps:
       - checkout
       #- run: npm publish --tag dev --access public
@@ -17,6 +18,7 @@ jobs:
       - run:  head -5 package.json
   publish_master:
     docker:
+      - image: circleci/node:10-alpine
     steps:
       - checkout
       #- run: npm publish --access public
