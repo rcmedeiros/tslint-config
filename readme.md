@@ -1,6 +1,6 @@
 # tslint-config
 
-This is yet another tslint-config. It started as an overstrict set of rules which I relaxed over time. It's here just to keep code quality consistency.
+This is yet another tslint-config. It started as an overstrict set of rules which I relaxed over time.
 
 ## Install
 ```shell
