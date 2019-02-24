@@ -1,6 +1,10 @@
+# tslint-config
+
+This is yeat another tslint-config. It started as an overstrict set of rules which I relaxed over time. It's here just to keep code quality consistency.
+
 ## Install
 ```shell
-npm install --save-dev tslint tslint-config-rcm
+npm i @rcmedeiros/tslint-config
 ```
 
 ## Usage
