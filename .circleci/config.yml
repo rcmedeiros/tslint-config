@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  init:
+    docker:
+      - image: circleci/node:10-alpine
+    steps:
+      - checkout
+      - run: sed -i "s/-dev/-${CIRCLE_BUILD_NUM}/g" package.json
+      - run: printenv | grep NPM
+      - run:  head -5 package.json
+  publish_develop:
+    steps:
+      - checkout
+      #- run: npm publish --tag dev --access public
+      - run: printenv | grep NPM
+      - run:  head -5 package.json
+  publish_master:
+    steps:
+      - checkout
+      #- run: npm publish --access public
+      - run: printenv | grep NPM
+      - run:  head -5 package.json
+workflows:
+  version: 2
+  publishhh:
+    jobs:
+      - init
+      - publish_develop:
+          filters:
+            branches:
+              only: develop
+      - publish_master:
+          filters:
+            branches:
+              only: master
