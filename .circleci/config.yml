@@ -16,6 +16,7 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - checkout
       - attach_workspace:
           at: ./
       - run: printenv | grep CIRCLE_BUILD_NUM
@@ -27,6 +28,7 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - checkout
       - attach_workspace:
           at: ./
       - run: printenv | grep NPM
