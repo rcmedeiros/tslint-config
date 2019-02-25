@@ -12,7 +12,6 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - checkout
       #- run: npm publish --tag dev --access public
       - run: printenv | grep CIRCLE_BUILD_NUM
       - run: printenv | grep NPM
@@ -21,7 +20,6 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - checkout
       #- run: npm publish --access public
       - run: printenv | grep NPM
       - run:  head -5 package.json
