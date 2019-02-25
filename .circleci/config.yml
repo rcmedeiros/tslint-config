@@ -8,21 +8,30 @@ jobs:
       - run: sed -i "s/-dev/-${CIRCLE_BUILD_NUM}/g" package.json
       - run: printenv | grep NPM
       - run:  head -5 package.json
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - package.json
   publish_develop:
     docker:
       - image: circleci/node:10
     steps:
-      #- run: npm publish --tag dev --access public
+      - attach_workspace:
+          at: ./
       - run: printenv | grep CIRCLE_BUILD_NUM
       - run: printenv | grep NPM
       - run:  head -5 package.json
+      - run: ls -lt
+      #- run: npm publish --tag dev --access public
   publish_master:
     docker:
       - image: circleci/node:10
     steps:
-      #- run: npm publish --access public
+      - attach_workspace:
+          at: ./
       - run: printenv | grep NPM
       - run:  head -5 package.json
+      #- run: npm publish --access public
 workflows:
   version: 2
   publish:
