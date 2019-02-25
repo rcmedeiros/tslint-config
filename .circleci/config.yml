@@ -6,12 +6,12 @@ jobs:
     steps:
       - checkout
       - run: sed -i "s/-dev/-${CIRCLE_BUILD_NUM}/g" package.json
-      - run: printenv | grep NPM
-      - run:  head -5 package.json
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
       - persist_to_workspace:
           root: ./
           paths:
             - package.json
+            - .npmrc
   publish_develop:
     docker:
       - image: circleci/node:10
