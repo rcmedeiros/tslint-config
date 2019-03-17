@@ -1,5 +1,7 @@
 # tslint-config
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rcmedeiros/tslint-config.svg)](https://greenkeeper.io/)
+
 This is yet another tslint-config. It started as an overstrict set of rules which I relaxed over time. It's here just to keep code quality consistency.
 
 ## Install
