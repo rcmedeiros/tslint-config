@@ -1,6 +1,5 @@
 {
     "rules": {
-        "no-unused-variable": true,
         "unified-signatures": true,
         "member-ordering": [
             true,
