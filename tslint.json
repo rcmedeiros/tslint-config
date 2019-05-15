@@ -196,7 +196,6 @@
         "restrict-plus-operands": true,
         "no-unsafe-finally": true,
         "no-unsafe-any": true,
-        "no-unbound-method": true,
         "no-this-assignment": true,
         "no-string-throw": true,
         "no-string-literal": true,
