@@ -208,7 +208,10 @@
         "no-invalid-this": true,
         "no-invalid-template-strings": true,
         "no-inferred-empty-object-type": true,
-        "no-implicit-dependencies": true,
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
         "no-for-in-array": true,
         "no-floating-promises": true,
         "no-eval": true,
