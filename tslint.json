@@ -182,7 +182,6 @@
         "no-parameter-reassignment": false,
         "no-non-null-assertion": true,
         "no-namespace": true,
-        "no-magic-numbers": true,
         "no-internal-module": true,
         "no-inferrable-types": false,
         "no-import-side-effect": false,
