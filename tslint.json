@@ -1,6 +1,5 @@
 {
     "rules": {
-        "no-unused-variable": true,
         "unified-signatures": true,
         "member-ordering": [
             true,
@@ -9,15 +8,15 @@
                     "private-static-field",
                     "protected-static-field",
                     "public-static-field",
+                    "private-static-method",
+                    "protected-static-method",
+                    "public-static-method",
                     "private-instance-field",
                     "protected-instance-field",
                     "public-instance-field",
                     "private-constructor",
                     "protected-constructor",
                     "public-constructor",
-                    "private-static-method",
-                    "protected-static-method",
-                    "public-static-method",
                     "private-instance-method",
                     "protected-instance-method",
                     "public-instance-method"
@@ -183,7 +182,6 @@
         "no-parameter-reassignment": false,
         "no-non-null-assertion": true,
         "no-namespace": true,
-        "no-magic-numbers": true,
         "no-internal-module": true,
         "no-inferrable-types": false,
         "no-import-side-effect": false,
@@ -198,7 +196,6 @@
         "restrict-plus-operands": true,
         "no-unsafe-finally": true,
         "no-unsafe-any": true,
-        "no-unbound-method": true,
         "no-this-assignment": true,
         "no-string-throw": true,
         "no-string-literal": true,
@@ -211,7 +208,10 @@
         "no-invalid-this": true,
         "no-invalid-template-strings": true,
         "no-inferred-empty-object-type": true,
-        "no-implicit-dependencies": true,
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
         "no-for-in-array": true,
         "no-floating-promises": true,
         "no-eval": true,
@@ -246,7 +246,7 @@
         "await-promise": true,
         "object-literal-sort-keys": [
             true,
-            "match-declaration-order"
+            "match-declaration-order-only"
         ],
         "no-require-imports": true,
         "no-mergeable-namespace": true,
